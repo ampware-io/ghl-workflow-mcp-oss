@@ -1,0 +1,82 @@
+{
+  "id": "wf-real-1",
+  "name": "Find-or-create opportunity (Shape A multipath)",
+  "version": 1,
+  "status": "draft",
+  "actions": [
+    {
+      "id": "find-1",
+      "type": "find_opportunity",
+      "name": "Find opp",
+      "order": 1,
+      "next": "outer-1",
+      "attributes": {}
+    },
+    {
+      "id": "outer-1",
+      "type": "if_else",
+      "name": "Opportunity exists?",
+      "nodeType": "condition-node",
+      "cat": "conditions",
+      "order": 2,
+      "next": ["by-1", "bn-1"],
+      "attributes": {
+        "operator": "and",
+        "if": true,
+        "branches": [
+          {
+            "segments": [
+              {
+                "conditions": [
+                  { "conditionType": "opportunity", "conditionOperator": "exists" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "by-1",
+      "type": "if_else",
+      "name": "Yes branch",
+      "nodeType": "branch-yes",
+      "parent": "outer-1",
+      "parentKey": "outer-1",
+      "sibling": ["bn-1"],
+      "order": 3,
+      "next": "update-1",
+      "attributes": { "if": false, "branches": [] }
+    },
+    {
+      "id": "bn-1",
+      "type": "if_else",
+      "name": "No branch",
+      "nodeType": "branch-no",
+      "parent": "outer-1",
+      "parentKey": "outer-1",
+      "sibling": ["by-1"],
+      "order": 4,
+      "next": "create-1",
+      "attributes": { "else": true }
+    },
+    {
+      "id": "update-1",
+      "type": "update_opportunity",
+      "name": "Update existing",
+      "parent": "by-1",
+      "parentKey": "by-1",
+      "order": 5,
+      "attributes": {}
+    },
+    {
+      "id": "create-1",
+      "type": "create_opportunity",
+      "name": "Create new",
+      "parent": "bn-1",
+      "parentKey": "bn-1",
+      "order": 6,
+      "attributes": {}
+    }
+  ]
+}

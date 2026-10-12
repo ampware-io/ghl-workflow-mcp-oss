@@ -1,0 +1,1441 @@
+{
+  "actions": {
+    "add_contact_tag_tool": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "tags",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "tags": []
+      }
+    },
+    "add_notes": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "html",
+          "jsType": "string"
+        },
+        {
+          "key": "type",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "html": "<p></p>",
+        "type": "add_notes"
+      }
+    },
+    "add_to_affiliate_campaign": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "campaign_id",
+          "jsType": "string"
+        },
+        {
+          "key": "type",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "campaign_id": "",
+        "type": "add_to_affiliate_campaign"
+      }
+    },
+    "add_to_workflow": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "workflowId",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "workflowId": ""
+      }
+    },
+    "agent_studio_execution": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "airtable_create_record": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "airtable_delete_record": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "airtable_retrieve_record": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "airtable_update_record": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "appointment_booking": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "calendarId",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "calendarId": "",
+        "timezone": "account"
+      }
+    },
+    "appointment_booking_conversation_ai": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "asana_ia_asana_create_comment": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "asana_ia_asana_create_project": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "asana_ia_asana_create_task": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "asana_ia_asana_get_task": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "asana_ia_asana_update_task": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "assign_to_user_tool": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "userId",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "userId": ""
+      }
+    },
+    "associate_records": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "objectType",
+          "jsType": "string"
+        },
+        {
+          "key": "recordId",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "objectType": "",
+        "recordId": ""
+      }
+    },
+    "calendars_generate_one_time_booking_link": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "calendarId",
+          "jsType": "string"
+        },
+        {
+          "key": "type",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "calendarId": "",
+        "type": "calendars_generate_one_time_booking_link",
+        "__customInputs__": {}
+      }
+    },
+    "clickup_add_comment": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "clickup_ia_create_task": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "clickup_ia_delete_task": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "clickup_ia_update_task": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "conversationai_ai_message": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "conversationai_book_appointment": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "conversationai_end": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "create_and_associate_company": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "name",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "name": ""
+      }
+    },
+    "custom-push-notification": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "title",
+          "jsType": "string"
+        },
+        {
+          "key": "body",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "title": "",
+        "body": "",
+        "groupId": ""
+      }
+    },
+    "edit_conversation": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "read",
+          "jsType": "string"
+        },
+        {
+          "key": "archive",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "read": "none",
+        "archive": "none"
+      }
+    },
+    "email": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "subject",
+          "jsType": "string"
+        },
+        {
+          "key": "from_email",
+          "jsType": "string"
+        },
+        {
+          "key": "from_name",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "subject": "",
+        "preHeader": "",
+        "template_id": "",
+        "templatesource": "email-builder",
+        "from_email": "",
+        "from_name": "",
+        "attachments": [],
+        "syncEnabled": true,
+        "trackingOptions": {
+          "hasTrackingLinks": true,
+          "hasUtmTracking": false,
+          "hasTags": false,
+          "sourceId": ""
+        },
+        "conditions": []
+      }
+    },
+    "find_all_tasks": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "find_task_by_id": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "goto": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "targetNodeId",
+          "jsType": "string"
+        },
+        {
+          "key": "type",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "targetNodeId": "",
+        "type": "goto"
+      }
+    },
+    "grant-group-access": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "groupId",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "groupId": ""
+      }
+    },
+    "if_else": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "branches",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "currentRecipeType": "CUSTOM",
+        "branches": [],
+        "operator": "and",
+        "if": true,
+        "conditionName": "Condition",
+        "version": 2,
+        "noneBranchName": "None"
+      }
+    },
+    "internal-delete-contact": {
+      "category": "Internal",
+      "shapeStatus": "partial",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "internal_create_opportunity": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "pipelineId",
+          "jsType": "string"
+        },
+        {
+          "key": "pipelineStageId",
+          "jsType": "string"
+        },
+        {
+          "key": "title",
+          "jsType": "string"
+        },
+        {
+          "key": "status",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "pipelineId": "",
+        "pipelineStageId": "",
+        "title": "",
+        "status": "open",
+        "assignedTo": ""
+      }
+    },
+    "internal_notification": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "type",
+          "jsType": "string"
+        },
+        {
+          "key": "to",
+          "jsType": "array"
+        },
+        {
+          "key": "subject",
+          "jsType": "string"
+        },
+        {
+          "key": "message",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "type": "email",
+        "to": [],
+        "subject": "",
+        "message": ""
+      }
+    },
+    "internal_update_opportunity": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "pipelineId",
+          "jsType": "string"
+        },
+        {
+          "key": "pipelineStageId",
+          "jsType": "string"
+        },
+        {
+          "key": "status",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "pipelineId": "",
+        "pipelineStageId": "",
+        "status": "open"
+      }
+    },
+    "lc_monday_create_item": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "lc_monday_delete_item": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "lc_monday_get_items": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "lc_monday_update_item": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "math_operation": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "selectField",
+          "jsType": "string"
+        },
+        {
+          "key": "selectFieldtype",
+          "jsType": "string"
+        },
+        {
+          "key": "updateField",
+          "jsType": "string"
+        },
+        {
+          "key": "updateFieldType",
+          "jsType": "string"
+        },
+        {
+          "key": "operators",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "selectField": "",
+        "selectFieldtype": "numerical",
+        "sourceCustomValueId": "",
+        "updateField": "",
+        "updateFieldType": "numerical",
+        "targetCustomValueId": "",
+        "operators": []
+      }
+    },
+    "notion_add_comment": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "notion_create_database_item": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "notion_create_page": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "notion_find_database_item": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "notion_retrieve_page": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "notion_update_database_item": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "payments_create_invoice": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "items",
+          "jsType": "array"
+        },
+        {
+          "key": "dueDate",
+          "jsType": "object"
+        }
+      ],
+      "defaultAttributes": {
+        "items": [],
+        "dueDate": {
+          "type": "days",
+          "value": 7,
+          "when": "after"
+        }
+      }
+    },
+    "remove_contact_tag_tool": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "tags",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "tags": []
+      }
+    },
+    "remove_from_workflow": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "workflowId",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "workflowId": ""
+      }
+    },
+    "revoke-group-access": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "groupId",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "groupId": ""
+      }
+    },
+    "sms": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "message",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "message": "",
+        "attachments": []
+      }
+    },
+    "task-notification": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "title",
+          "jsType": "string"
+        },
+        {
+          "key": "body",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "title": "",
+        "body": "",
+        "assignedTo": "",
+        "dueDate": {
+          "type": "days",
+          "value": 1,
+          "when": "after"
+        }
+      }
+    },
+    "update_contact_field": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "type",
+          "jsType": "string"
+        },
+        {
+          "key": "actionType",
+          "jsType": "string"
+        },
+        {
+          "key": "fields",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "type": "update_contact_field",
+        "actionType": "update_field_data",
+        "fields": []
+      }
+    },
+    "voice_ai_outbound_call": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "wait": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "type",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "type": "time",
+        "startAfter": {
+          "type": "minutes",
+          "value": 0,
+          "when": "after"
+        },
+        "name": "",
+        "cat": "",
+        "isHybridAction": true,
+        "hybridActionType": "wait",
+        "convertToMultipath": false,
+        "transitions": []
+      }
+    },
+    "webhook": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "url",
+          "jsType": "string"
+        },
+        {
+          "key": "method",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "url": "",
+        "method": "POST",
+        "headers": {},
+        "body": ""
+      }
+    },
+    "workflow_ai_decision_maker": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "instructions",
+          "jsType": "string"
+        },
+        {
+          "key": "information",
+          "jsType": "string"
+        },
+        {
+          "key": "type",
+          "jsType": "string"
+        },
+        {
+          "key": "transitions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "instructions": "",
+        "information": "",
+        "type": "workflow_ai_decision_maker",
+        "__customInputs__": {},
+        "cat": "multi-path",
+        "convertToMultipath": true,
+        "__name__": "Decision Maker",
+        "transitions": []
+      }
+    },
+    "workflow_ai_intent_detection": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "inputText",
+          "jsType": "string"
+        },
+        {
+          "key": "type",
+          "jsType": "string"
+        },
+        {
+          "key": "transitions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "inputText": "",
+        "type": "workflow_ai_intent_detection",
+        "__customInputs__": {},
+        "cat": "multi-path",
+        "convertToMultipath": true,
+        "__name__": "Detect Intent",
+        "transitions": []
+      }
+    },
+    "workflow_ai_summarize_text": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "maxLength",
+          "jsType": "string"
+        },
+        {
+          "key": "inputText",
+          "jsType": "string"
+        },
+        {
+          "key": "type",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "maxLength": "3 sentences",
+        "inputText": "",
+        "type": "workflow_ai_summarize_text",
+        "__customInputs__": {}
+      }
+    },
+    "workflow_ai_translate_content": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "from",
+          "jsType": "string"
+        },
+        {
+          "key": "to",
+          "jsType": "string"
+        },
+        {
+          "key": "inputText",
+          "jsType": "string"
+        },
+        {
+          "key": "type",
+          "jsType": "string"
+        },
+        {
+          "key": "prompt",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "from": "English",
+        "to": "Spanish",
+        "inputText": "",
+        "type": "workflow_ai_translate_content",
+        "__customInputs__": {},
+        "prompt": ""
+      }
+    },
+    "event_start_date": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "type",
+          "jsType": "string"
+        },
+        {
+          "key": "event_start_type",
+          "jsType": "string"
+        },
+        {
+          "key": "value",
+          "jsType": "string"
+        }
+      ],
+      "defaultAttributes": {
+        "type": "event_start_date",
+        "event_start_type": "datetime",
+        "value": ""
+      }
+    },
+    "workflow_goal": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "action",
+          "jsType": "string"
+        },
+        {
+          "key": "segments",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "type": "workflow_goal",
+        "action": "exit",
+        "op": "or",
+        "segments": []
+      }
+    },
+    "workflow_split": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "condition",
+          "jsType": "string"
+        },
+        {
+          "key": "transitions",
+          "jsType": "array"
+        },
+        {
+          "key": "paths",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "name": "Split",
+        "cat": "multi-path",
+        "type": "workflow_split",
+        "condition": "random-split",
+        "transitions": [],
+        "paths": [],
+        "extras": {
+          "weightDistribution": {}
+        }
+      }
+    },
+    "transition": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [],
+      "defaultAttributes": {
+        "cat": "transition"
+      }
+    }
+  },
+  "triggers": {
+    "abandoned_checkout": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "affiliate_sales": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "airtable_new_record_created": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "airtable_record_updated": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "appointment": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "asana_it_asana_task_created": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "asana_it_asana_task_updated": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "clickup_new_task": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "clickup_task_updated": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "contact_created": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "contact_tag_added": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "contact_tag_removed": {
+      "category": "Native",
+      "shapeStatus": "partial",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "contact_tag": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "ecommerce_order_fulfilled_trigger": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "form_submission": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "funnel_website_pageview": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "google_lead_form_submitted": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "group_access_granted": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "group_access_revoked": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "inbound_webhook": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "lc_fathom_new_recording": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "lc_gforms_new_updated_response": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "lc_monday_new_item_created": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "linkedin_form_submitted": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "notion_new_database_item": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "notion_updated_database_item": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "opportunity_status_changed": {
+      "category": "Native",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "opportunity_changed": {
+      "category": "Native",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "opportunity_decay": {
+      "category": "Native",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "pipeline_stage_updated": {
+      "category": "Native",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "survey_submission": {
+      "category": "Native",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "highlevel",
+        "conditions": []
+      }
+    },
+    "proposal_estimate_update": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "reputation_review_received": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "service_booking": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "subscription": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "survey_monkey_it_response_completed": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    },
+    "task_completed": {
+      "category": "Internal",
+      "shapeStatus": "captured",
+      "requiredAttributes": [
+        {
+          "key": "masterType",
+          "jsType": "string"
+        },
+        {
+          "key": "conditions",
+          "jsType": "array"
+        }
+      ],
+      "defaultAttributes": {
+        "masterType": "internal",
+        "conditions": []
+      }
+    },
+    "typeform_new_entry": {
+      "category": "Integration",
+      "shapeStatus": "unverified",
+      "requiredAttributes": [],
+      "defaultAttributes": {}
+    }
+  }
+}

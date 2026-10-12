@@ -1,0 +1,52 @@
+{
+  "id": "wf-test-branched-001",
+  "name": "Test Branched Workflow",
+  "version": 1,
+  "status": "draft",
+  "actions": [
+    {
+      "id": "S1",
+      "type": "wait",
+      "name": "Wait 1 day",
+      "attributes": { "duration": "1d" },
+      "parentKey": null,
+      "order": 1,
+      "next": "S2"
+    },
+    {
+      "id": "S2",
+      "type": "email",
+      "name": "Send welcome email",
+      "attributes": { "subject": "Welcome", "body": "Hello!" },
+      "parentKey": "S1",
+      "order": 2,
+      "next": "S3"
+    },
+    {
+      "id": "S3",
+      "type": "if_else",
+      "name": "Tag check branch",
+      "attributes": { "condition": "has_tag" },
+      "parentKey": "S2",
+      "order": 3,
+      "branchYes": "S4",
+      "branchNo": "S5"
+    },
+    {
+      "id": "S4",
+      "type": "email",
+      "name": "Tagged-user email",
+      "attributes": { "subject": "Premium" },
+      "parentKey": "S3",
+      "order": 4
+    },
+    {
+      "id": "S5",
+      "type": "email",
+      "name": "Untagged-user email",
+      "attributes": { "subject": "Standard" },
+      "parentKey": "S3",
+      "order": 5
+    }
+  ]
+}

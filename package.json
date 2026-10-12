@@ -1,0 +1,38 @@
+{
+  "name": "ghl-workflow-mcp",
+  "version": "0.1.0",
+  "description": "Open-source MCP server for reading and writing GoHighLevel workflows through your own logged-in Chrome session.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "ghl-workflow-mcp": "src/index.js"
+  },
+  "files": [
+    "src/**/*.js",
+    "!src/**/*.test.js",
+    "src/registry/action-shapes.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test 'src/**/*.test.js'"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gohighlevel",
+    "highlevel",
+    "workflows",
+    "claude"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "chrome-remote-interface": "^0.34.0",
+    "zod": "^3.25.76"
+  }
+}

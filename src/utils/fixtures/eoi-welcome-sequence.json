@@ -1,0 +1,229 @@
+{
+  "_note": "Synthetic fixture (fictional \"Acme\" sender, placeholder IDs). Reproduces common hand-authored shape mistakes so the validator salvage outcomes can be regression-locked.",
+  "name": "EOI Welcome Sequence",
+  "status": "published",
+  "triggers": [
+    {
+      "type": "form_submission",
+      "name": "EOI form",
+      "attributes": {
+        "form_id": "eoi_form_abc123",
+        "filters": []
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "email",
+      "name": "1. Welcome email",
+      "attributes": {
+        "subject": "Thanks for your interest!",
+        "from_name": "Acme Team",
+        "from_email": "team@acme.example",
+        "preHeader": "We received your EOI",
+        "html": "<p>Hi {{contact.first_name}}, thanks for submitting your EOI.</p>",
+        "trackingOptions": {
+          "open": true,
+          "click": true
+        }
+      }
+    },
+    {
+      "type": "wait",
+      "name": "2. Wait 1 day",
+      "attributes": {
+        "startAfter": {
+          "value": 1,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "type": "if_else",
+      "name": "3. Has package-purchaser tag?",
+      "attributes": {
+        "conditions": [
+          {
+            "conditionType": "contact_detail",
+            "conditionSubType": "tags",
+            "conditionOperator": "contains",
+            "value": "package purchaser"
+          }
+        ]
+      }
+    },
+    {
+      "type": "send_whatsapp_template",
+      "name": "4. WhatsApp follow-up",
+      "attributes": {
+        "template_name": "eoi_followup_v1",
+        "message": "Hi {{contact.first_name}}, just checking in!"
+      }
+    },
+    {
+      "type": "add_contact_tag",
+      "name": "5. Tag: EOI received",
+      "attributes": {
+        "tags": [
+          {
+            "id": "tag_eoi_received_id",
+            "name": "eoi_received"
+          }
+        ]
+      }
+    },
+    {
+      "type": "email",
+      "name": "6. Education email",
+      "attributes": {
+        "subject": "About our packages",
+        "from_name": "Acme Team",
+        "from_email": "team@acme.example",
+        "preHeader": "Here's what we offer",
+        "html": "<p>Our packages include...</p>",
+        "trackingOptions": {
+          "open": true,
+          "click": true
+        }
+      }
+    },
+    {
+      "type": "wait",
+      "name": "7. Wait 2 days",
+      "attributes": {
+        "startAfter": {
+          "value": 2,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "type": "if_else",
+      "name": "8. Engaged with last email?",
+      "attributes": {
+        "conditions": [
+          {
+            "conditionType": "email_engagement",
+            "conditionSubType": "opened",
+            "conditionOperator": "is",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "type": "send_whatsapp_template",
+      "name": "9. WhatsApp re-engagement",
+      "attributes": {
+        "template_name": "eoi_reengage_v1",
+        "message": "Hi {{contact.first_name}}, did you have any questions?"
+      }
+    },
+    {
+      "type": "create_opportunity",
+      "name": "10. Create opportunity",
+      "attributes": {
+        "pipeline_id": "pipeline_eoi",
+        "stage_id": "stage_new",
+        "name": "{{contact.full_name}} \u2014 EOI",
+        "monetary_value": 0
+      }
+    },
+    {
+      "type": "update_opportunity_pipeline",
+      "name": "11. Move to qualified",
+      "attributes": {
+        "pipeline_id": "pipeline_eoi",
+        "stage_id": "stage_qualified"
+      }
+    },
+    {
+      "type": "wait",
+      "name": "12. Wait 3 days",
+      "attributes": {
+        "startAfter": {
+          "value": 3,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "type": "email",
+      "name": "13. Final reminder",
+      "attributes": {
+        "subject": "Last chance",
+        "from_name": "Acme Team",
+        "from_email": "team@acme.example",
+        "preHeader": "Don't miss out",
+        "html": "<p>Final reminder...</p>",
+        "trackingOptions": {
+          "open": true,
+          "click": false
+        }
+      }
+    },
+    {
+      "type": "if_else",
+      "name": "14. Replied?",
+      "attributes": {
+        "conditions": [
+          {
+            "conditionType": "contact_detail",
+            "conditionSubType": "tags",
+            "conditionOperator": "contains",
+            "value": "replied"
+          }
+        ]
+      }
+    },
+    {
+      "type": "add_contact_tag",
+      "name": "15. Tag: nurture-complete",
+      "attributes": {
+        "tags": [
+          {
+            "id": "tag_nurture_complete_id",
+            "name": "nurture_complete"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wait",
+      "name": "16. Wait 7 days",
+      "attributes": {
+        "startAfter": {
+          "value": 7,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "type": "remove_contact_tag",
+      "name": "17. Untag: EOI received",
+      "attributes": {
+        "tags": [
+          {
+            "id": "tag_eoi_received_id",
+            "name": "eoi_received"
+          }
+        ]
+      }
+    },
+    {
+      "type": "email",
+      "name": "18. Long-term nurture",
+      "attributes": {
+        "subject": "Stay in touch",
+        "from_name": "Acme Team",
+        "from_email": "team@acme.example",
+        "preHeader": "Future updates",
+        "html": "<p>We'll keep you posted...</p>",
+        "trackingOptions": {
+          "open": true,
+          "click": true
+        }
+      }
+    }
+  ]
+}
