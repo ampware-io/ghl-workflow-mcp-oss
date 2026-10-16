@@ -28,10 +28,12 @@ It needs no API key and no marketplace app install. The server attaches to a Chr
 
 ## Install
 
+Install from GitHub for now; the npm package follows.
+
 ### Claude Code
 
 ```bash
-claude mcp add ghl-workflow -- npx -y ghl-workflow-mcp
+claude mcp add ghl-workflow -- npx -y github:ampware-io/ghl-workflow-mcp-oss#v0.1.0
 ```
 
 ### Claude Desktop, Cursor and other MCP clients
@@ -43,7 +45,7 @@ Add this to your client's MCP config (for Claude Desktop that is `claude_desktop
   "mcpServers": {
     "ghl-workflow": {
       "command": "npx",
-      "args": ["-y", "ghl-workflow-mcp"]
+      "args": ["-y", "github:ampware-io/ghl-workflow-mcp-oss#v0.1.0"]
     }
   }
 }
@@ -52,8 +54,8 @@ Add this to your client's MCP config (for Claude Desktop that is `claude_desktop
 ### From source
 
 ```bash
-git clone <this repo>
-cd ghl-workflow-mcp
+git clone https://github.com/ampware-io/ghl-workflow-mcp-oss.git
+cd ghl-workflow-mcp-oss
 npm install
 npm test
 node src/index.js --version
