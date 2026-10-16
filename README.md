@@ -33,7 +33,7 @@ Install from GitHub for now; the npm package follows.
 ### Claude Code
 
 ```bash
-claude mcp add ghl-workflow -- npx -y github:ampware-io/ghl-workflow-mcp-oss#v0.1.0
+claude mcp add ghl-workflow -- npx -y github:ampware-io/ghl-workflow-mcp-oss#v0.1.1
 ```
 
 ### Claude Desktop, Cursor and other MCP clients
@@ -45,7 +45,7 @@ Add this to your client's MCP config (for Claude Desktop that is `claude_desktop
   "mcpServers": {
     "ghl-workflow": {
       "command": "npx",
-      "args": ["-y", "github:ampware-io/ghl-workflow-mcp-oss#v0.1.0"]
+      "args": ["-y", "github:ampware-io/ghl-workflow-mcp-oss#v0.1.1"]
     }
   }
 }
@@ -100,7 +100,7 @@ The validator tells you a step is wrong. It does not tell you what every field m
 
 ## The step reference: GHL Workflow Docs MCP
 
-Building a correct workflow needs more than access. You need to know each trigger and action type's JSON shape, its required and optional fields, the allowed values, and how steps link together (`next`, if/else branches, waits, goto). That reference is published separately as the hosted **GHL Workflow Docs MCP**: a verified step reference with worked examples that your assistant can query while it builds. Connect both servers and Claude gets access plus the knowledge to use it well.
+Building a correct workflow needs more than access. You need to know each trigger and action type's JSON shape, its required and optional fields, the allowed values, and how steps link together (`next`, if/else branches, waits, goto). That reference is published separately as the hosted **GHL Workflow Docs MCP** (`https://workflow-docs.ampware.io/mcp`): a step reference, captured from 1,600+ real workflows and being live-verified, with worked examples that your assistant can query while it builds. Connect both servers and Claude gets access plus the knowledge to use it well.
 
 ## Privacy and safety
 

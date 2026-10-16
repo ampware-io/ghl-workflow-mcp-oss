@@ -1,6 +1,6 @@
 {
   "name": "ghl-workflow-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Open-source MCP server for reading and writing GoHighLevel workflows through your own logged-in Chrome session.",
   "type": "module",
   "main": "src/index.js",
